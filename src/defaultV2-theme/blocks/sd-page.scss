@@ -1,0 +1,21 @@
+.sd-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 calcSize(5);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sd-root-modern--mobile .sd-page {
+  padding: 0;
+}
+
+.sd-page .sd-page__title {
+  @include page_title();
+}
+
+.sd-page .sd-page__description {
+  @include page_description();
+}

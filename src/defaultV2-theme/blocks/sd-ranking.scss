@@ -1,0 +1,64 @@
+.sv-ranking-item--error .sv-ranking-item__index {
+  background-color: $red-light;
+  box-shadow: 0px 1px 2px transparent;
+  border-color: transparent;
+}
+
+.sd-element--with-frame .sv-ranking-item {
+  left: calcSize(-3);
+}
+
+
+.sd-element--with-frame .sv-ranking--mobile {
+  .sv-ranking-item__icon-container {
+    margin-left: 0;
+    margin-right: calcSize(1);
+  }
+
+  .sv-ranking-item {
+    left: 0;
+  }
+}
+
+@mixin ranking_responsive {
+  .sv-ranking-item__icon-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.sv-ranking-item__content.sd-ranking-item__content {
+  line-height: calcLineHeight(1.5);
+}
+
+.sv-dragdrop-movedown {
+  transform: translate(0, 0);
+  animation: svdragdropmovedown 0.1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes svdragdropmovedown {
+  0% {
+    transform: translate(0, -50px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.sv-dragdrop-moveup {
+  transform: translate(0, 0);
+  animation: svdragdropmoveup 0.1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes svdragdropmoveup {
+  0% {
+    transform: translate(0, 50px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

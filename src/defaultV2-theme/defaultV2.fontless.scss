@@ -1,0 +1,187 @@
+@import "./blocks/mixins.scss";
+@import "../common-styles/common-styles.scss";
+
+@import "blocks/sd-element.scss";
+@import "blocks/sd-question.scss";
+@import "blocks/sd-collapsed-element.scss";
+@import "blocks/sd-complex-element.scss";
+@import "blocks/sd-input.scss";
+@import "blocks/sd-comment.scss";
+@import "blocks/sd-panel.scss";
+@import "blocks/sd-signaturepad.scss";
+@import "blocks/sd-checkbox.scss";
+@import "blocks/sd-matrixdynamic.scss";
+@import "blocks/sd-table.scss";
+@import "blocks/sd-page.scss";
+@import "blocks/sd-row.scss";
+@import "blocks/sd-title.scss";
+@import "blocks/sd-description.scss";
+@import "blocks/sd-item.scss";
+@import "blocks/sd-selectbase.scss";
+@import "blocks/sd-checkbox.scss";
+@import "blocks/sd-radio.scss";
+@import "blocks/sd-visuallyhidden.scss";
+@import "blocks/sd-matrix.scss";
+@import "blocks/sd-rating.scss";
+@import "blocks/sd-ranking.scss";
+@import "blocks/sd-dropdown.scss";
+@import "blocks/sd-tagbox.scss";
+@import "blocks/sd-imagepicker.scss";
+@import "blocks/sd-image.scss";
+@import "blocks/sd-html.scss";
+@import "blocks/sd-expression.scss";
+@import "blocks/sd-progress.scss";
+@import "blocks/sd-boolean.scss";
+@import "blocks/sd-paneldynamic.scss";
+@import "blocks/sd-file.scss";
+@import "blocks/sd-hidden.scss";
+@import "blocks/sd-navigation.scss";
+@import "blocks/sd-button.scss";
+@import "blocks/sd-body.scss";
+@import "blocks/sd-multipletext.scss";
+@import "blocks/sd-action.scss";
+@import "blocks/sd-action-bar.scss";
+@import "blocks/sd-context-btn.scss";
+@import "blocks/sd-completedpage.scss";
+@import "blocks/sd-progress-buttons.scss";
+@import "blocks/sd-progress-toc.scss";
+@import "blocks/sd-list.scss";
+@import "blocks/sd-timer.scss";
+@import "blocks/header.scss";
+@import "blocks/sd-loading-indicator.scss";
+@import "../components-container.scss";
+@import "../signaturepad.scss";
+@import "./defaultV2.m600.scss";
+
+body {
+  --sv-defaultV2-mark: true;
+}
+
+.sd-root-modern {
+  -webkit-font-smoothing: antialiased;
+  --sd-mobile-width: 600px;
+  --sd-timer-size: calc(18 * #{$base-unit});
+  width: 100%;
+  font-family: $font-family;
+  background-color: $background-dim;
+  position: relative;
+
+  form {
+    // z-index: 1;
+    position: relative;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $border transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 32px;
+    background-color: $border;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: $foreground-light;
+  }
+}
+
+.sd-root-modern.sd-root-modern--full-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: static;
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $border transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 32px;
+    background-color: $border;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: $foreground-light;
+  }
+}
+
+.sd-root-modern--mobile {
+  --sd-timer-size: calc(9 * #{$base-unit});
+}
+
+.sd-root-modern__wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.sd-root-modern--full-container .sd-root-modern__wrapper--fixed {
+  position: static;
+  width: 100%;
+  height: 100%;
+
+  form {
+    overflow: auto;
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.sv-popup {
+  .sv-popup__scrolling-content {
+    scrollbar-width: thin;
+    scrollbar-color: $border transparent;
+
+    *,
+    & {
+      &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        background-color: $background;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        border-radius: 32px;
+        background-color: $border;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        border: 2px solid rgba(0, 0, 0, 0);
+        background-color: $foreground-light;
+      }
+    }
+  }
+}
